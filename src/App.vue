@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <HelloWorld :msg="msg"/>
+    <Header :msg="msg"/>
     <router-view>
     </router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/Header.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'App',
@@ -19,7 +19,7 @@ export default {
     }
   },
   components: {
-    HelloWorld,
+    Header,
   }
 }
 </script>

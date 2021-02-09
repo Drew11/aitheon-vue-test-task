@@ -7,10 +7,21 @@ import PostList from './components/PostList.vue';
 Vue.use(VueRouter);
 
 const routes = [
+
     {
         path: '/',
-        component: PostList,
-        alias:'/posts',
+        redirect: to => {
+            const { path } = to;
+            console.log(to)
+            if (path=== '/') {
+                return  {path: 'posts'}
+            }
+        }
+    },
+    {
+        name: 'posts',
+        path: '/posts',
+        component: PostList ,
     },
     {
         name: 'post',
@@ -27,9 +38,6 @@ const router = new VueRouter({
 
 Vue.config.productionTip = false;
 
-
-
-console.log(router)
 new Vue({
     router,
     render: h => h(App),

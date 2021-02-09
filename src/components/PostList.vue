@@ -1,12 +1,11 @@
-<script src="../../../05-Vue-section/vue-todo-app/vue.config.js"></script>
 <template>
-
     <div class="post-list">
 
         <ul>
             <li :key="post.id"
                 v-for="post in posts"
             >
+                {{reversedMessage}}
                 <span>
                      {{post.id}}
                 </span>
@@ -47,7 +46,7 @@
 </template>
 
 <script>
-
+console.log('sdf')
 import axios from 'axios';
 
 export default {
@@ -74,22 +73,28 @@ export default {
             })
             .finally(() => this.loading = false)
     },
+    computed:{
+        reversedMessage: function () {
+           console.log(this.posts)
+            return '';
+        }
+    },
     methods: {
-        getPostId(id){
-            this.selectedPost = this.posts.filter(post=>post.id === id)[0];
-
-        },
-
-        createDetail(post){
-            console.log(post)
-                this.$router.push({
-                    name: 'post',
-                    params: {
-                        id: post.id,
-                        post
-                    }
-                })
-            }
+        // getPostId(id){
+        //     this.selectedPost = this.posts.filter(post=>post.id === id)[0];
+        //
+        // },
+        //
+        // createDetail(post){
+        //     console.log(post)
+        //     this.$router.push({
+        //         name: 'post',
+        //         params: {
+        //             id: post.id,
+        //             post
+        //         }
+        //     })
+        // }
 
     },
 }

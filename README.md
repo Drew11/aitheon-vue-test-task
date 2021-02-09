@@ -2,7 +2,10 @@
 
 ## Project setup
 ```
-git clonegh
+git clone https://github.com/Drew11/aitheon-vue-test-task.git
+cd aitheon-vue-test-task
+npm i or npm install
+
 ```
 
 ### Compiles and hot-reloads for development
@@ -15,10 +18,10 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
+### Deploy 
 ```
-yarn lint
+npm run deploy
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### To check demo click the  [Link](https://drew11.github.io/aitheon-vue-test-task/).
+
