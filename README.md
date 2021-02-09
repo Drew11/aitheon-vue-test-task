@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-yarn install
+git clonegh
 ```
 
 ### Compiles and hot-reloads for development
